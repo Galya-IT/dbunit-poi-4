@@ -226,7 +226,7 @@ public class Main
         HSSFCell cell = row.getCell((short)3);
         if (cell == null)
             cell = row.createCell((short)3);
-        cell.setCellType(HSSFCell.CELL_TYPE_STRING);
+        cell.setCellType(HSSFCellType.STRING);
         cell.setCellValue("a test");
 
         // Write the output to a file
@@ -244,7 +244,7 @@ public class Main
         row.createCell((short) 1).setCellValue(new Date());
         row.createCell((short) 2).setCellValue("a string");
         row.createCell((short) 3).setCellValue(true);
-        row.createCell((short) 4).setCellType(HSSFCell.CELL_TYPE_ERROR);
+        row.createCell((short) 4).setCellType(HSSFCellType.ERROR);
 
         // Write the output to a file
         FileOutputStream fileOut = new FileOutputStream("workbook.xls");

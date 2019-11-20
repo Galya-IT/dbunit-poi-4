@@ -11,3 +11,9 @@ mvn install:install-file -Dfile=lib\ojdbc6.jar -DgroupId=com.oracle -DartifactId
 ```
 mvn -DskipTests=true package
 ```
+
+* Upload to private artifact repo or install locally:
+
+```
+mvn install:install-file -Dfile=C:\dev\docs\CREMANT-27148\dbunit-poi-4-master\dbunit\target\dbunit-2.6.1-SNAPSHOT.jar -DgroupId=org.dbunit -DartifactId=dbunit -Dversion=2.6.1-SNAPSHOT -Dpackaging=jar
+```

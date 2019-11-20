@@ -79,7 +79,7 @@
         <logbackVersion>1.2.3</logbackVersion>
         <mmmockobjectsVersion>1.12.0</mmmockobjectsVersion>
         <mockObjectsVersion>0.09</mockObjectsVersion>
-        <poiVersion>3.17</poiVersion>
+        <poiVersion>4.1.1</poiVersion>
         <slf4jVersion>1.7.25</slf4jVersion>
         <xmlParserAPIsVersion>2.6.2</xmlParserAPIsVersion>
 
@@ -366,8 +366,20 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.poi</groupId>
+                    <artifactId>poi-ooxml-schemas</artifactId>
+                </exclusion>
+            </exclusions>
             <version>${poiVersion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>ooxml-schemas</artifactId>
+            <version>1.4</version>
+        </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

@@ -30,6 +30,7 @@ import java.util.Map;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DataFormat;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -189,11 +190,11 @@ public class XlsDataSetWriter
     {
 //        double excelDateValue = HSSFDateUtil.getExcelDate(value);
 //        cell.setCellValue(excelDateValue);
-//        cell.setCellType(HSSFCell.CELL_TYPE_NUMERIC);
+//        cell.setCellType(HSSFCellType.NUMERIC);
 
         long timeMillis = value.getTime();
         cell.setCellValue( (double)timeMillis );
-        cell.setCellType(Cell.CELL_TYPE_NUMERIC);
+        cell.setCellType(CellType.NUMERIC);
         cell.setCellStyle(this.dateCellStyle);
         
 //      System.out.println(HSSFDataFormat.getBuiltinFormats());
@@ -240,7 +241,7 @@ public class XlsDataSetWriter
 //            System.out.println("date formatted:"+formatted);
 ////            HSSFRichTextString s = new HSSFRichTextString(formatted);
 ////            cell.setCellValue(s);
-//            cell.setCellType(HSSFCell.CELL_TYPE_NUMERIC);
+//            cell.setCellType(HSSFCellType.NUMERIC);
 //            cell.setCellValue((double)dateValue.getTime());
 //            cell.setCellStyle(cellStyleDateTimeWithSeconds);
 //        }

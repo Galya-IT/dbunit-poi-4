@@ -74,12 +74,7 @@ public class XlsDataSet extends AbstractDataSet
     {
         _tables = super.createTableNameMap();
 
-        Workbook workbook;
-        try {
-            workbook = WorkbookFactory.create(in);
-        } catch (InvalidFormatException e) {
-            throw new IOException(e);
-        }
+        Workbook workbook = WorkbookFactory.create(in);
 		
         int sheetCount = workbook.getNumberOfSheets();
         for (int i = 0; i < sheetCount; i++)
